@@ -3,6 +3,7 @@ package util;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ReadFile {
@@ -15,6 +16,12 @@ public class ReadFile {
     public Stream<String> getLinesStream() throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(filePath));
         return br.lines().onClose(() -> closeQuietly(br));
+    }
+
+    public String getContentAsString() throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            return br.lines().collect(Collectors.joining(System.lineSeparator()));
+        }
     }
 
     private void closeQuietly(BufferedReader br) {
