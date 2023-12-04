@@ -7,7 +7,7 @@ I'll try it again until i get distracted by other projects or something differen
 Language: Java
 - Day1 (2/2)
 - Day2 (1/2)
-
+- Day3 (0/2)
 
 
 ## AOC2021
