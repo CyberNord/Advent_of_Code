@@ -8,7 +8,7 @@ Language: Java
 - Day1 (2/2)
 - Day2 (1/2)
 - Day3 (0/2)
-
+- Day4 (0/2)
 
 ## AOC2021
 
